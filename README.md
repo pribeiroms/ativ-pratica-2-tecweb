@@ -1,102 +1,37 @@
-# Wishlist de Presentes
+🎯 Objetivo Geral
 
-Aplicação web desenvolvida em React para gerenciamento de uma lista de presentes desejados. O sistema permite cadastrar, organizar e visualizar itens de interesse, contendo informações como nome do presente, categoria, preço estimado, prioridade e observações.
+Desenvolver uma aplicação web em React que implemente navegação, formulário com validação, listagem de dados e gerenciamento de estado compartilhado, simulando um cenário real de desenvolvimento frontend integrado a API REST.
 
-## Objetivo
 
-Desenvolver uma aplicação web utilizando React que permita ao usuário gerenciar uma lista de presentes desejados, aplicando conceitos de roteamento, formulários controlados, validação de dados, compartilhamento de estado e integração com API REST simulada.
 
-## Integrantes
+🧩 Requisitos Funcionais
 
-* Paula Ribeiro
-* Aluisio
-* Miguel
+A aplicação deverá obrigatoriamente conter:
 
-## Funcionalidades
+Menu de navegação com no mínimo três páginas (Início, Cadastro e Listagem) utilizando roteamento no React;
+Formulário controlado, com validação de campos e tratamento adequado de eventos;
+Listagem dinâmica de dados, com renderização múltipla;
+Gerenciamento de estado compartilhado entre páginas permitindo que dados cadastrados sejam refletidos na listagem;
+Integração com API REST para consumo e exibição de dados;
+Estilização com CSS externo e responsividade básica.
 
-* Navegação entre as páginas Início, Cadastro e Listagem;
-* Cadastro de presentes por meio de formulário controlado;
-* Validação dos campos obrigatórios;
-* Compartilhamento de estado entre páginas;
-* Exibição dinâmica dos itens cadastrados;
-* Integração com API REST simulada;
-* Interface responsiva para diferentes dispositivos.
 
-## Tecnologias Utilizadas
+👥 Trabalho em Grupo
 
-* React
-* React Router DOM
-* JavaScript
-* CSS
-* Fetch API
+O trabalho pode ser realizado em grupo de até 4 integrantes. Todos devem estar como colaboradores no repositório e submeter individualmente o link.
 
-## Estrutura de Páginas
 
-### Início
 
-Página responsável por apresentar a aplicação, seu objetivo e suas principais funcionalidades.
+📂 Entrega do Projeto
 
-### Cadastro
+O projeto deve conter:
 
-Página destinada ao cadastro de novos presentes contendo os campos:
+Repositório no GitHub;
+Organização das tarefas por meio de Kanban (GitHub Projects);
+Commits organizados e coerentes com a evolução do projeto;
+Aplicação executável localmente.
 
-* Nome do item;
-* Categoria;
-* Preço estimado;
-* Prioridade;
-* Observações.
 
-### Listagem
+📊 Critérios de Avaliação
 
-Página responsável por exibir todos os presentes cadastrados dinamicamente.
-
-## Organização do Projeto
-
-O desenvolvimento foi organizado utilizando:
-
-* GitHub Projects para gerenciamento das tarefas;
-* Issues para controle das funcionalidades;
-* Branches individuais para cada tarefa;
-* Pull Requests para integração das alterações;
-* Commits padronizados seguindo convenções semânticas.
-
-## Como Executar o Projeto
-
-### Pré-requisitos
-
-* Node.js instalado;
-* npm instalado.
-
-### Instalação
-
-Instale as dependências do projeto:
-
-```bash
-npm install
-```
-
-### Execução
-
-Execute a aplicação localmente:
-
-```bash
-npm run dev
-```
-
-Após iniciar a aplicação, acesse a URL exibida no terminal e navegue entre as páginas Início, Cadastro e Listagem.
-
-## Estrutura de Branches
-
-### Branch Principal
-
-* `main`
-
-### Branches de Integração
-
-* `feature/paula-dev`
-* `feature/aluisio-dev`
-* `feature/miguel-dev`
-
-## API REST Simulada
-
-A aplicação utiliza uma API REST simulada para demonstrar a integração entre frontend e serviços externos. Os dados são carregados por meio de requisições utilizando `fetch`.
+A avaliação será realizada com base na rubrica disponibilizada na atividade, a qual estabelece os critérios e os níveis de desempenho considerados na correção.
