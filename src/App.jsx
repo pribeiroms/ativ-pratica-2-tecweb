@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react'
+=======
+import { useState } from 'react'
+import { PresentesProvider } from './PresentesContext.jsx'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+>>>>>>> origin/feature/miguel-dev
 import Listagem from './Listagem.jsx'
 import './App.css'
 
@@ -83,6 +91,7 @@ function App() {
   }
 
   return (
+<<<<<<< HEAD
     <main className="app-container">
       <header className="app-header">
         <h1>Wishlist de Presentes</h1>
@@ -92,6 +101,28 @@ function App() {
       <nav className="app-nav">
         <button type="button" className={pagina === 'cadastro' ? 'active' : ''} onClick={() => setPagina('cadastro')}>
           Cadastro
+=======
+    <PresentesProvider>
+      <>
+        <section id="center">
+        <div className="hero">
+          <img src={heroImg} className="base" width="170" height="179" alt="" />
+          <img src={reactLogo} className="framework" alt="React logo" />
+          <img src={viteLogo} className="vite" alt="Vite logo" />
+        </div>
+        <div>
+          <h1>Get started</h1>
+          <p>
+            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+          </p>
+        </div>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+        >
+          Count is {count}
+>>>>>>> origin/feature/miguel-dev
         </button>
         <button type="button" className={pagina === 'listagem' ? 'active' : ''} onClick={() => setPagina('listagem')}>
           Listagem
@@ -135,6 +166,7 @@ function App() {
               </select>
             </label>
 
+<<<<<<< HEAD
             <label>
               Preço estimado
               <input
@@ -182,6 +214,13 @@ function App() {
         <Listagem presentes={presentes} />
       )}
     </main>
+=======
+      <div className="ticks"></div>
+      <section id="spacer"></section>
+      <Listagem presentes={presentes} />
+    </>
+    </PresentesProvider>
+>>>>>>> origin/feature/miguel-dev
   )
 }
 
