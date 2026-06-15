@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Fone de ouvido",
+    "categoria": "Eletrônicos",
+    "preco": "299.90",
+    "prioridade": "Alta",
+    "observacoes": "Preferência por modelo com cancelamento de ruído"
+  },
+  {
+    "id": 2,
+    "nome": "Livro de React",
+    "categoria": "Livros",
+    "preco": "89.90",
+    "prioridade": "Média",
+    "observacoes": "Edição mais recente"
+  },
+  {
+    "id": 3,
+    "nome": "Camisa esportiva",
+    "categoria": "Roupas",
+    "preco": "79.90",
+    "prioridade": "Baixa",
+    "observacoes": "Tamanho M"
+  }
+]
