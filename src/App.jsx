@@ -20,15 +20,23 @@ function App() {
   const [mensagem, setMensagem] = useState('')
 
   useEffect(() => {
-    fetch('/presentes.json')
+    fetch('https://fakestoreapi.com/products?limit=3')
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Falha ao carregar dados da API simulada')
+          throw new Error('Falha ao carregar dados da API REST simulada')
         }
         return response.json()
       })
       .then((data) => {
-        setPresentes(data)
+        const apresentados = data.map((item) => ({
+          id: item.id,
+          nome: item.title,
+          categoria: item.category || 'Outros',
+          preco: Number(item.price).toFixed(2),
+          prioridade: 'Média',
+          observacoes: item.description || '',
+        }))
+        setPresentes(apresentados)
       })
       .catch((error) => {
         setErro(error.message)
