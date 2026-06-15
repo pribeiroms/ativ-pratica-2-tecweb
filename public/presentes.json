@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "Fone de ouvido sem fio",
+    "categoria": "Eletrônicos",
+    "preco": 299.9,
+    "prioridade": "Alta",
+    "observacoes": "Preferência por cancelamento de ruído"
+  },
+  {
+    "nome": "Livro de receitas",
+    "categoria": "Livros",
+    "preco": 79.5,
+    "prioridade": "Média",
+    "observacoes": "Cozinha vegana e saudável"
+  },
+  {
+    "nome": "Jogo de tabuleiro",
+    "categoria": "Lazer",
+    "preco": 149.99,
+    "prioridade": "Baixa",
+    "observacoes": "Para jogar com amigos nos fins de semana"
+  }
+]
