@@ -224,6 +224,90 @@
   border-color: #ffffff;
 }
 
+.cadastro-form {
+  max-width: 760px;
+  display: grid;
+  gap: 18px;
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--text-h);
+  background: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 3px solid rgba(47, 125, 98, 0.18);
+  border-color: var(--accent);
+}
+
+.form-error {
+  color: #b42318;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-success,
+.empty-message {
+  max-width: 760px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.presentes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.presente-card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(25, 27, 34, 0.05);
+}
+
+.presente-card h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.presente-card p {
+  margin-bottom: 8px;
+}
+
 @media (max-width: 960px) {
   .app-header,
   .page-content {
@@ -255,6 +339,10 @@
 
   .feature-section h2 {
     max-width: 620px;
+  }
+
+  .presentes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -305,6 +393,10 @@
   .lead {
     font-size: 18px;
   }
+
+  .presentes-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -328,7 +420,9 @@
 
   .home-summary article,
   .feature-card,
-  .home-cta {
+  .home-cta,
+  .cadastro-form,
+  .presente-card {
     padding: 22px;
   }
 }
