@@ -62,6 +62,12 @@
   padding: 72px 0;
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
 .hero-page {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -112,6 +118,94 @@
   background: var(--surface);
 }
 
+.home-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.home-summary article {
+  padding: 28px;
+}
+
+.home-summary article + article {
+  border-left: 1px solid var(--border);
+}
+
+.home-summary span {
+  display: inline-flex;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.home-summary h2,
+.feature-card h3,
+.home-cta h2 {
+  margin-bottom: 10px;
+}
+
+.home-summary p,
+.feature-card p,
+.home-cta p {
+  margin-bottom: 0;
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.feature-section h2 {
+  max-width: 420px;
+  font-size: 32px;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.feature-card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.home-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 8px;
+  color: #eef8f2;
+  background: #1f5f4a;
+}
+
+.home-cta h2,
+.home-cta p {
+  color: inherit;
+}
+
+.home-cta p {
+  max-width: 660px;
+}
+
+.home-cta .button.primary {
+  flex: 0 0 auto;
+  color: #1f5f4a;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
 @media (max-width: 720px) {
   .app-header {
     align-items: flex-start;
@@ -126,6 +220,25 @@
   .hero-page {
     grid-template-columns: 1fr;
     align-items: start;
+  }
+
+  .home-summary,
+  .feature-section {
+    grid-template-columns: 1fr;
+  }
+
+  .home-summary article + article {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .home-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .home-cta .button.primary {
+    width: 100%;
   }
 
   .page {
