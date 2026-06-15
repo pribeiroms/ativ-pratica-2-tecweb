@@ -3,10 +3,12 @@ import { PresentesProvider } from './PresentesContext.jsx'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import Listagem from './Listagem.jsx'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const presentes = []
 
   return (
     <PresentesProvider>
@@ -117,6 +119,7 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <Listagem presentes={presentes} />
     </>
     </PresentesProvider>
   )
