@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useWishlist } from '../context/WishlistContext'
 
 const estadoInicial = {
   nome: '',
@@ -41,6 +42,7 @@ function temErros(erros) {
 }
 
 function Cadastro() {
+  const { addPresente } = useWishlist()
   const [form, setForm] = useState(estadoInicial)
   const [erros, setErros] = useState(errosInicial)
   const [enviado, setEnviado] = useState(false)
@@ -60,7 +62,7 @@ function Cadastro() {
       setErros(novosErros)
       return
     }
-    console.log('Presente cadastrado:', form)
+    addPresente(form)
     setForm(estadoInicial)
     setErros(errosInicial)
     setEnviado(true)
@@ -71,9 +73,13 @@ function Cadastro() {
     <section className="page cadastro-page">
       <p className="eyebrow">Cadastro</p>
       <h1>Novo presente</h1>
-      <p className="lead">Preencha os dados do item que deseja adicionar à sua wishlist.</p>
+      <p className="lead">
+        Preencha os dados do item que deseja adicionar à sua wishlist.
+      </p>
 
-      {enviado && <p className="form-success">Presente cadastrado com sucesso!</p>}
+      {enviado && (
+        <p className="form-success">Presente cadastrado com sucesso!</p>
+      )}
 
       <form className="cadastro-form" onSubmit={handleSubmit} noValidate>
         <div className="form-group">
@@ -91,7 +97,12 @@ function Cadastro() {
 
         <div className="form-group">
           <label htmlFor="categoria">Categoria</label>
-          <select id="categoria" name="categoria" value={form.categoria} onChange={handleChange}>
+          <select
+            id="categoria"
+            name="categoria"
+            value={form.categoria}
+            onChange={handleChange}
+          >
             <option value="">Selecione uma categoria</option>
             <option value="Tecnologia">Tecnologia</option>
             <option value="Livros">Livros</option>
@@ -100,7 +111,9 @@ function Cadastro() {
             <option value="Casa">Casa</option>
             <option value="Outros">Outros</option>
           </select>
-          {erros.categoria && <span className="form-error">{erros.categoria}</span>}
+          {erros.categoria && (
+            <span className="form-error">{erros.categoria}</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -120,13 +133,20 @@ function Cadastro() {
 
         <div className="form-group">
           <label htmlFor="prioridade">Prioridade</label>
-          <select id="prioridade" name="prioridade" value={form.prioridade} onChange={handleChange}>
+          <select
+            id="prioridade"
+            name="prioridade"
+            value={form.prioridade}
+            onChange={handleChange}
+          >
             <option value="">Selecione a prioridade</option>
             <option value="Alta">Alta</option>
             <option value="Media">Média</option>
             <option value="Baixa">Baixa</option>
           </select>
-          {erros.prioridade && <span className="form-error">{erros.prioridade}</span>}
+          {erros.prioridade && (
+            <span className="form-error">{erros.prioridade}</span>
+          )}
         </div>
 
         <div className="form-group">
