@@ -20,6 +20,7 @@
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .main-nav {
@@ -48,6 +49,12 @@
 .main-nav a.active {
   color: var(--accent);
   background: var(--accent-bg);
+}
+
+.main-nav a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid rgba(47, 125, 98, 0.28);
+  outline-offset: 3px;
 }
 
 .page-content {
@@ -105,6 +112,15 @@
   border-radius: 8px;
   font-weight: 700;
   text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
 }
 
 .button.primary {
@@ -124,6 +140,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
+  box-shadow: var(--shadow);
   overflow: hidden;
 }
 
@@ -177,6 +194,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
+  box-shadow: 0 12px 30px rgba(25, 27, 34, 0.05);
 }
 
 .home-cta {
@@ -187,7 +205,7 @@
   padding: 32px;
   border-radius: 8px;
   color: #eef8f2;
-  background: #1f5f4a;
+  background: var(--accent-dark);
 }
 
 .home-cta h2,
@@ -201,20 +219,15 @@
 
 .home-cta .button.primary {
   flex: 0 0 auto;
-  color: #1f5f4a;
+  color: var(--accent-dark);
   background: #ffffff;
   border-color: #ffffff;
 }
 
-@media (max-width: 720px) {
-  .app-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .main-nav,
-  .main-nav a {
-    width: 100%;
+@media (max-width: 960px) {
+  .app-header,
+  .page-content {
+    width: min(100% - 28px, 900px);
   }
 
   .hero-page {
@@ -222,11 +235,55 @@
     align-items: start;
   }
 
-  .home-summary,
+  .actions {
+    align-self: start;
+  }
+
+  .home-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-summary article:last-child {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
   .feature-section {
     grid-template-columns: 1fr;
   }
 
+  .feature-section h2 {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main-nav,
+  .main-nav a {
+    width: 100%;
+  }
+
+  .main-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .main-nav a {
+    padding: 0 10px;
+  }
+
+  .home-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .home-summary article:last-child,
   .home-summary article + article {
     border-top: 1px solid var(--border);
     border-left: 0;
@@ -247,5 +304,31 @@
 
   .lead {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header,
+  .page-content {
+    width: calc(100% - 24px);
+  }
+
+  .brand {
+    white-space: normal;
+  }
+
+  .main-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .actions,
+  .actions .button {
+    width: 100%;
+  }
+
+  .home-summary article,
+  .feature-card,
+  .home-cta {
+    padding: 22px;
   }
 }
