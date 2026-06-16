@@ -308,6 +308,36 @@
   margin-bottom: 8px;
 }
 
+.api-section {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.api-section h2 {
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+
+.api-card {
+  border-color: rgba(47, 125, 98, 0.32);
+}
+
+.status-message {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.status-message.error {
+  background: #fef3f2;
+  color: #b42318;
+}
+
 @media (max-width: 960px) {
   .app-header,
   .page-content {

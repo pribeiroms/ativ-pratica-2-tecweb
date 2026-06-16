@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Kindle",
+    "categoria": "Tecnologia",
+    "preco": "499.90",
+    "prioridade": "Media",
+    "observacoes": "Sugestao carregada da API simulada."
+  },
+  {
+    "id": 2,
+    "nome": "Jogo de panelas",
+    "categoria": "Casa",
+    "preco": "289.90",
+    "prioridade": "Baixa",
+    "observacoes": "Item externo para complementar a wishlist."
+  },
+  {
+    "id": 3,
+    "nome": "Ingresso para show",
+    "categoria": "Experiencia",
+    "preco": "180.00",
+    "prioridade": "Alta",
+    "observacoes": "Exemplo de dado consumido via fetch."
+  }
+]
